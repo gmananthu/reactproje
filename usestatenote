@@ -1,0 +1,144 @@
+// import "./App.css"
+// import {useState} from 'react'
+
+
+// function App() {
+//   const [count,setCount] =useState(0)
+//   const addCount=()=>{
+//     setCount(count+1);
+//   }
+
+//   return (
+//   <div className="hello"> 
+//     <button onClick={addCount}>button</button>
+    
+//   <h1>Counter: {count}</h1>
+//    </div>
+//   );
+// }
+
+// export default App;
+
+
+
+// //destructuring
+
+
+
+
+// function Counter(props) {
+//   return (
+//     <div>
+//         <h1>{props.title} {props.count}</h1>
+//     </div>
+//   )
+// }
+
+
+//destructure/**
+
+// function Counter(props) {
+//   const {count,title} =props
+//   return (
+//     <div>
+//         <h1>{title} {count}</h1>
+//     </div>
+//   )
+// }
+
+
+// function counter({count,title}){
+//   return(
+//     <div>
+//     <h1>{title} {count}</h1>
+//   )
+// }
+
+
+
+// var obj={
+//   title:"First counter",
+//   count,
+//   place:"bangalore"
+// } 
+
+// return (
+// <div className="hello"> 
+// <button onClick={addCount}>button</button>
+
+// <Counter {...obj}/>
+// <Counter title="Second counter: " count={count}/>
+// </div>
+// );
+// }
+
+
+
+
+// if(state){                             //  or //        {state? <counter/> : null}
+//     <counter/>                                      
+// }
+// else null
+
+
+
+
+
+
+// use effect useeffect
+
+// import React from 'react'
+// import {useState,useEffect} from 'react'
+
+// function Counter() {
+//   const [count,setCount]=useState(0)
+//   const [count2,setCount2] = useState(0)
+//     useEffect(()=>{
+//         console.log('Mounting....');
+//        console.log('updating...'+count)
+//       console.log('updating' +count2)
+//     },[count,count2])
+    
+//   return (
+//       <div>
+//       <button onClick={()=>{setCount(count+1)}}>Increment</button>
+//     <div>Hello I am Counter: {count}</div>
+
+//     <button onClick={()=>{setCount2(count2+1)}}>Increment</button>
+//     <div>Hello I am Counter: {count2}</div>
+//     </div>
+//   )
+// }
+
+
+full aapp
+
+// import React from "react";
+// import "./App.css"
+// import NavBar from "./Components/NavBar/NavBar";
+// import {useState,useEffect} from 'react';
+
+// function App() {
+//   const [count,setCount] = useState(0);
+//   const [state,setState] = useState(false)
+//   useEffect(()=>{
+//     console.log("mounting")
+//     console.log("updating" + count);
+//     return ()=>{
+//     console.log("cleanup.. "+count);
+//     }
+//     },[count])
+//   return(
+//     <div>
+//       <h2 onClick={()=>{setCount(count+1)}}>Count change</h2>
+//       <h2 onClick={()=>setState(!state)}>Show/Hide</h2>
+//       <h2>Hello {count}</h2>
+//       {
+//         state && <NavBar/>
+//       }
+      
+//     </div>
+//   )
+
+// }
+// export default App;
